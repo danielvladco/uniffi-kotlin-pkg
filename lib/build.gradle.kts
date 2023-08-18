@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
   // Add the JNA. No need to manually include the jar: https://github.com/java-native-access/jna
-  implementation("net.java.dev.jna:jna:5.8.0")
+  implementation("net.java.dev.jna:jna:5.8.0@aar")
 }
 
 java {
@@ -42,11 +42,11 @@ publishing {
         artifactId = "zcash"
 		version = "0.0.0"
                 description.set("The librustzcash Kotlin FFI binding")
-                url.set("https://github.com/eigerco/uniffi-kotlin-pkg")
+                url.set("https://github.com/danielvladco/uniffi-kotlin-pkg")
                 licenses {
                     license {
                         name.set("The MIT License")
-                        url.set("https://github.com/eigerco/uniffi-kotlin-pkg/blob/main/LICENSE")
+                        url.set("https://github.com/danielvladco/uniffi-kotlin-pkg/blob/main/LICENSE")
                     }
                 }
            }
@@ -56,7 +56,7 @@ publishing {
      maven {
         name = "GitHubPackages"
         // url = uri(System.getenv("KOTLIN_REGISTRY_URL")) // https://example.com/repository/maven
-        url = uri("https://maven.pkg.github.com/eigerco/uniffi-kotlin-pkg")
+        url = uri("https://maven.pkg.github.com/danielvladco/uniffi-kotlin-pkg")
         isAllowInsecureProtocol = true // uncomment this for testing.
         credentials {
             // username = System.getenv("KOTLIN_REGISTRY_USERNAME") // Use "token" as the username for API token authentication
